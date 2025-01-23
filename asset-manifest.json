@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/wweather-forecast-app/static/css/main.7868063a.css",
+    "main.js": "/wweather-forecast-app/static/js/main.1bc73fd1.js",
+    "static/media/b5.png": "/wweather-forecast-app/static/media/b5.58ee123735291b8da040.png",
+    "static/media/b3.png": "/wweather-forecast-app/static/media/b3.7acecb3d0824a012edad.png",
+    "static/media/b6.png": "/wweather-forecast-app/static/media/b6.9746247745451a9a8f2d.png",
+    "static/media/b7.png": "/wweather-forecast-app/static/media/b7.8c4b25898a330cfc9adc.png",
+    "static/media/b4.png": "/wweather-forecast-app/static/media/b4.954e66b8651db8af95df.png",
+    "static/media/b2.png": "/wweather-forecast-app/static/media/b2.c1d82bc65bc0be1afd95.png",
+    "static/media/b14.png": "/wweather-forecast-app/static/media/b14.36cf1cc05212f6fd00e5.png",
+    "index.html": "/wweather-forecast-app/index.html",
+    "main.7868063a.css.map": "/wweather-forecast-app/static/css/main.7868063a.css.map",
+    "main.1bc73fd1.js.map": "/wweather-forecast-app/static/js/main.1bc73fd1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7868063a.css",
+    "static/js/main.1bc73fd1.js"
+  ]
+}
