@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #f0f0f0;
+  color: #333;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  transition: background 0.5s ease;
+}
+
+.app.default {
+  background: url('./image/b14.png') no-repeat center/cover;
+}
+
+.app.clear {
+  background: url('./image/b2.png') no-repeat center/cover;
+}
+
+.app.rain {
+  background: url('./image/b3.png') no-repeat center/cover;
+}
+
+.app.clouds {
+  background: url('./image/b4.png') no-repeat center/cover;
+}
+
+.app.haze {
+  background: url('./image/b5.png') no-repeat center/cover;
+}
+
+.app.smoke {
+  background: url('./image/b6.png') no-repeat center/cover;
+}
+
+.app.mist {
+  background: url('./image/b7.png') no-repeat center/cover;
+}
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  width: 250px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+.search-container button:hover {
+  background: #0056b3;
+}
+
+.weather-container {
+  background: rgba(19, 16, 16, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.main-weather {
+  margin-bottom: 20px;
+}
+
+.main-weather h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.main-weather h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+.main-weather .condition {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #4c4d4e;
+}
+
+.main-weather img {
+  width: 120px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.detail-card {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.detail-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #666;
+}
+
+.detail-card:hover {
+  background: #e9ecef;
+}
+
+.unit-toggle {
+  margin-top: 20px;
+  background: #ff7e5f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+.unit-toggle:hover {
+  background: #e55039;
+}
+
+.loading, .error {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: red;
+  font-family: 'Roboto', sans-serif;
+}
+
+.weather-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detail-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-box {
+  display: flex;
+  gap: 40px;
+  flex: 2;
+  padding: 20px;
+}
+
+.forecast-container {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-card h4 {
+  font-size: 1.2rem;
+}
+
+.forecast-card p {
+  font-size: 1rem;
+}
+
+.forecast-toggle {
+  margin-top: 20px;
+  background: #ff7e5f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.forecast-toggle:hover {
+  background: #e55039;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+.download-btn,
+.share-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.download-btn:hover,
+.share-btn:hover {
+  background-color: #0056b3;
+}
+
+.forecast-container {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 800px; 
+  text-align: center;
+}
+
+.forecast-grid {
+  display: flex;  
+  gap: 20px;      
+  flex-wrap: nowrap;  
+  justify-content: center;  
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 180px;  
+  text-align: center;
+}
+
+.forecast-card h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.forecast-card p {
+  font-size: 1rem;
+}
+
+.forecast-card img {
+  width: 50px;
+  margin-top: 10px;
+}
+
+/* Styling for buttons (Download and Share) */
+.weather-buttons {
+  margin-top: 30px;  /* Space between forecast and buttons */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.download-btn,
+.share-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.download-btn:hover,
+.share-btn:hover {
+  background-color: #0056b3;
+}
+.main-box{
+  display: block;
+}
+
+.blinking-text {
+  animation: blink 1.5s step-start infinite;
+  text-align: center;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.caption {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* You can add more styling for the welcome text here if needed */
+.welcome-container {
+  margin-bottom: 20px;
+}
+.blinking-text {
+  animation: blink 1.5s step-start infinite;
+  text-align: center;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.caption {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555;
+  margin-top: 10px;
+}
+
+.welcome-container {
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  font-size: 1rem;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.search-container button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search-container.hidden {
+  display: none;
+}
+
+
+
+.back-btn{
+  background-color: #007bff;
+  color:white
+}
+
+.back-btn:hover{
+  background-color: #0056b3;
+}
